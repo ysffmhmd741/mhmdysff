@@ -105,7 +105,20 @@ footer{margin-top:18px;text-align:center;color:var(--muted)}
   .projects .media{grid-template-columns:1fr}
   .hero{flex-direction:column;align-items:flex-start}
 }
+.menu-tugas {
+   display: flex;
+   gap: 20px;
+}
+.cta-button {
+   background-color: #e74c3;
+   color:
+   font-weight:
 
+   padding: 8px 15px;
+   border-radius:
+
+      transition; 0,3s ease;
+}
 /* Print-friendly tweaks */
 @media print{
   body{background:#fff;padding:0}
@@ -113,3 +126,4 @@ footer{margin-top:18px;text-align:center;color:var(--muted)}
   .container{max-width:100%}
   section.card, aside.card{box-shadow:none;border:1px solid #ddd}
 }
+
