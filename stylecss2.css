@@ -1,0 +1,250 @@
+/* =====================
+   RESET & GLOBAL
+===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =====================
+   HEADER & NAVIGATION
+===================== */
+header {
+    background-color: #1f2933;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* =====================
+   MAIN LAYOUT
+===================== */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    margin-bottom: 15px;
+    color: #1f2933;
+    border-bottom: 2px solid #38bdf8;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* =====================
+   ABOUT
+===================== */
+#about img {
+    margin-top: 15px;
+    max-width: 200px;
+    border-radius: 10px;
+    display: block;
+}
+
+/* =====================
+   TABLE (EDUCATION)
+===================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+caption {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+thead {
+    background-color: #1f2933;
+    color: #fff;
+}
+
+tfoot {
+    background-color: #f1f5f9;
+    font-size: 0.9em;
+}
+
+/* =====================
+   SKILLS
+===================== */
+#skills ul {
+    margin: 10px 0 20px 20px;
+}
+
+#skills li {
+    margin-bottom: 5px;
+}
+
+dl dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dl dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* =====================
+   PROJECTS
+===================== */
+#projects article {
+    margin-bottom: 25px;
+}
+
+#projects img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+#projects a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#projects a:hover {
+    text-decoration: underline;
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* =====================
+   CONTACT FORM
+===================== */
+form {
+    margin-top: 15px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: vertical;
+}
+
+small {
+    font-size: 0.8em;
+    color: #555;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #1f2933;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #38bdf8;
+    color: #000;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+    background-color: #1f2933;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #about img {
+        max-width: 150px;
+    }
+}
