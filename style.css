@@ -1,0 +1,115 @@
+/* styles.css - Styling untuk Portofolio Pribadi
+   Cocokkan dengan struktur HTML pada file utama (portfolio_index.html)
+   Sertakan fokus aksesibilitas, responsive layout, dan utilitas. */
+
+/* Reset ringan */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root{
+  --bg: #f3f6f9;
+  --card: #ffffff;
+  --primary: #0366d6;
+  --muted: #64748b;
+  --text: #0f172a;
+  --radius: 10px;
+  --shadow: 0 6px 14px rgba(16,24,40,0.06);
+  --gap: 18px;
+  --max-width: 1000px;
+}
+html,body{height:100%;}
+body{
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  padding: 20px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{max-width:var(--max-width);margin:0 auto}
+
+/* Header / Hero */
+header{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:var(--gap)}
+.hero{display:flex;gap:16px;align-items:center}
+.hero img{width:140px;height:140px;object-fit:cover;border-radius:50%;border:4px solid #fff;box-shadow:0 6px 14px rgba(16,24,40,0.08)}
+
+h1{font-size:1.6rem;color:#0b3b66;margin-bottom:6px}
+.lead{margin-top:6px;color:var(--muted)}
+
+/* Navigation */
+nav ul{display:flex;gap:10px;list-style:none;margin-top:10px}
+nav a{color:var(--primary);text-decoration:none;padding:6px 10px;border-radius:8px;display:inline-block}
+nav a:focus, nav a:hover{background:rgba(3,102,214,0.08);outline:none}
+
+/* Main layout */
+main{display:grid;grid-template-columns:2fr 1fr;gap:var(--gap);margin-top:var(--gap)}
+section.card, aside.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+
+/* Headings inside cards */
+section.card h2, aside.card h2{font-size:1.05rem;color:#13314e;margin-bottom:8px}
+
+/* About / Article */
+article p{margin-top:8px;color:var(--muted)}
+article dl{margin-top:10px}
+article dt{font-weight:700}
+article dd{margin-left:0;margin-bottom:8px;color:var(--muted)}
+
+/* Table styles */
+table{width:100%;border-collapse:collapse;margin-top:12px;background:transparent}
+caption{caption-side:top;text-align:left;font-weight:700;padding-bottom:8px}
+th, td{padding:10px;border:1px solid #eef6ff;text-align:left;font-size:0.95rem}
+thead th{background:#f8fbff}
+tfoot td{background:#fbfdff;font-style:italic}
+
+/* Skills */
+.skills ul{list-style:disc;margin-left:20px;color:var(--muted)}
+
+/* Projects grid */
+.projects .media{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+.project-card{padding:12px;border-radius:8px;background:#fbfdff;border:1px solid #eef6ff}
+.project-card img{width:100%;height:140px;object-fit:cover;border-radius:6px}
+.project-card a{display:inline-block;margin-top:8px;color:var(--primary)}
+
+/* Responsive iframe container (maintain aspect ratio) */
+.responsive-embed{position:relative;width:100%;padding-top:56.25%;overflow:hidden;border-radius:8px}
+.responsive-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+
+/* Form styles */
+form label{display:block;margin-top:10px;font-weight:600;color:#10243a}
+input[type="text"],input[type="email"],input[type="tel"],textarea,select{width:100%;padding:9px;border-radius:8px;border:1px solid #cbd5e1;margin-top:6px;font-size:0.95rem}
+textarea{resize:vertical}
+fieldset{margin-top:12px;padding:12px;border-radius:8px;border:1px solid #e2e8f0}
+legend{font-weight:700}
+small{display:block;color:var(--muted);margin-top:6px}
+button[type="submit"]{margin-top:12px;padding:10px 14px;border-radius:8px;background:var(--primary);color:#fff;border:none;cursor:pointer}
+button[type="submit"]:hover{opacity:0.95}
+
+/* Focus & accessibility helpers */
+:focus{outline:3px solid rgba(3,102,214,0.2);outline-offset:2px}
+
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+/* Aside (sidebar) focusable element */
+aside[tabindex]{outline: none}
+aside[tabindex]:focus{box-shadow:0 0 0 4px rgba(3,102,214,0.08)}
+
+/* Footer */
+footer{margin-top:18px;text-align:center;color:var(--muted)}
+
+/* Utilities */
+.u-mb{margin-bottom:12px}
+
+/* Responsive Behavior */
+@media (max-width: 800px){
+  main{grid-template-columns:1fr}
+  .projects .media{grid-template-columns:1fr}
+  .hero{flex-direction:column;align-items:flex-start}
+}
+
+/* Print-friendly tweaks */
+@media print{
+  body{background:#fff;padding:0}
+  nav, button, video{display:none}
+  .container{max-width:100%}
+  section.card, aside.card{box-shadow:none;border:1px solid #ddd}
+}
